@@ -53,6 +53,18 @@ const config = {
 		// ],
 	],
 
+	plugins: [
+		[
+			require.resolve("@cmfcmf/docusaurus-search-local"),
+			{
+				indexDocs: true,
+				indexBlog: true,
+				indexPages: true,
+				language: "en", // 例如 "zh"（中文）
+			},
+		],
+	],
+
 	presets: [
 		[
 			"classic",

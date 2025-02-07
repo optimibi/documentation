@@ -19,15 +19,15 @@ const config = {
 	// Even if you don't use internalization, you can use this field to set useful
 	// metadata like html lang. For example, if your site is Chinese, you may want
 	// to replace "en" with "zh-Hans".
-	// i18n: {
-	// 	defaultLocale: "en",
-	// 	locales: ["en"],
-	// 	localeConfigs: {
-	// 		en: {
-	// 			label: "English",
-	// 		},
-	// 	},
-	// },
+	i18n: {
+		defaultLocale: "en",
+		locales: ["en"],
+		localeConfigs: {
+			en: {
+				label: "English",
+			},
+		},
+	},
 
 	title: "OPTIMIBI",
 	tagline: "OPTIMIBI Documentation",
@@ -41,29 +41,29 @@ const config = {
 
 	themes: [
 		// ... Your other themes.
-		// [
-		// 	"@easyops-cn/docusaurus-search-local",
-		// 	{
-		// 		hashed: true,
-		// 		docsRouteBasePath: "/",
-		// 		//language: ["en"],
-		// 		highlightSearchTermsOnTargetPage: true,
-		// 		explicitSearchResultPath: true,
-		// 	},
-		// ],
-	],
-
-	plugins: [
 		[
-			require.resolve("@cmfcmf/docusaurus-search-local"),
+			"@easyops-cn/docusaurus-search-local",
 			{
-				indexDocs: true,
-				indexBlog: true,
-				indexPages: true,
-				language: "en", // 例如 "zh"（中文）
+				hashed: true,
+				docsRouteBasePath: "/",
+				language: "en",
+				highlightSearchTermsOnTargetPage: true,
+				explicitSearchResultPath: true,
 			},
 		],
 	],
+
+	// plugins: [
+	// 	[
+	// 		require.resolve("@cmfcmf/docusaurus-search-local"),
+	// 		{
+	// 			indexDocs: true,
+	// 			indexBlog: true,
+	// 			indexPages: true,
+	// 			language: ["en"], // 例如 "zh"（中文）
+	// 		},
+	// 	],
+	// ],
 
 	presets: [
 		[

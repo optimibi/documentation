@@ -73,4 +73,4 @@ travel(
 );
 
 //在build目录下创建一个CNAME文件，内容是optimibi.github.io
-fs.writeFileSync("./build/CNAME", "optimibi.github.io");
+//fs.writeFileSync("./build/CNAME", "optimibi.github.io");

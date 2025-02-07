@@ -20,16 +20,13 @@ const config = {
 	// metadata like html lang. For example, if your site is Chinese, you may want
 	// to replace "en" with "zh-Hans".
 	// i18n: {
-	// 	defaultLocale: "zh",
-	// 	locales: ["en", "zh"],
+	// 	defaultLocale: "en",
+	// 	locales: ["en"],
 	// 	localeConfigs: {
 	// 		en: {
-	// 			label: "English"
+	// 			label: "English",
 	// 		},
-	// 		zh: {
-	// 			label: "简体中文"
-	// 		}
-	// 	}
+	// 	},
 	// },
 
 	title: "OPTIMIBI",
@@ -44,16 +41,16 @@ const config = {
 
 	themes: [
 		// ... Your other themes.
-		[
-			"@easyops-cn/docusaurus-search-local",
-			{
-				hashed: true,
-				docsRouteBasePath: "/",
-				language: ["en", "zh"],
-				highlightSearchTermsOnTargetPage: true,
-				explicitSearchResultPath: true,
-			},
-		],
+		// [
+		// 	"@easyops-cn/docusaurus-search-local",
+		// 	{
+		// 		hashed: true,
+		// 		docsRouteBasePath: "/",
+		// 		//language: ["en"],
+		// 		highlightSearchTermsOnTargetPage: true,
+		// 		explicitSearchResultPath: true,
+		// 	},
+		// ],
 	],
 
 	presets: [

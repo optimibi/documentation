@@ -35,7 +35,7 @@ const config = {
 	title: "OPTIMIBI",
 	tagline: "OPTIMIBI Documentation",
 	url: "https://optimibi.github.io/",
-	baseUrl: "/documentation/",
+	baseUrl: "/",
 	onBrokenLinks: "throw",
 	onBrokenMarkdownLinks: "warn",
 	favicon: "img/favicon.ico",
@@ -105,6 +105,20 @@ const config = {
 					src: "img/DataFor-ImageFont.svg",
 				},
 				items: [
+					{
+						type: "doc",
+						docId: "introduction",
+						to: "/",
+						position: "left",
+						label: "Docs",
+					},
+					{
+						type: "docSidebar",
+						position: "left",
+						to: "/api/",
+						sidebarId: "api",
+						label: "API",
+					},
 					{
 						type: "localeDropdown",
 						position: "right",

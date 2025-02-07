@@ -11,3 +11,9 @@ How to deploy the latest version to production env? Follow the steps:
 7. Delete the docs folder, and rename the docs-gh-pages to docs
 8. Over
 
+# How to run in local?
+
+You should upgrade docusaurus to new version first, then
+
+1. yarn install
+2. yarn start 

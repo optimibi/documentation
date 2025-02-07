@@ -41,13 +41,6 @@ const config = {
 	favicon: "img/favicon.ico",
 	organizationName: "optimibi", // Usually your GitHub org/user name.
 	projectName: "documentation", // Usually your repo name.
-	i18n: {
-		defaultLocale: "zh-CN",
-		locales: ["zh-CN", "en"],
-		localeConfigs: {
-			"zh-CN": { label: "简体中文" },
-		},
-	},
 
 	themes: [
 		// ... Your other themes.
@@ -70,9 +63,8 @@ const config = {
 			({
 				docs: {
 					routeBasePath: "/",
+					path: "docs",
 					sidebarPath: require.resolve("./sidebars.js"),
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
 					editUrl: "https://github.com/optimibi/documentation/edit/main",
 				},
 				pages: {
@@ -87,15 +79,6 @@ const config = {
 		],
 	],
 
-	// plugins: [
-	// 	[
-	// 		require.resolve("@cmfcmf/docusaurus-search-local"),
-	// 		{
-	// 			indexBlog: false
-	// 		}
-	// 	]
-	// ],
-
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
@@ -106,22 +89,16 @@ const config = {
 				},
 				items: [
 					{
-						type: "doc",
-						docId: "introduction",
-						to: "/",
+						type: "docSidebar",
 						position: "left",
-						label: "Docs",
+						sidebarId: "docsSidebar",
+						label: "Documentation",
 					},
 					{
 						type: "docSidebar",
 						position: "left",
-						to: "/api/",
-						sidebarId: "api",
+						sidebarId: "apiSidebar",
 						label: "API",
-					},
-					{
-						type: "localeDropdown",
-						position: "right",
 					},
 				],
 			},

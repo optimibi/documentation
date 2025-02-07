@@ -1,22 +1,25 @@
 name: Deploy DataforDocs Github pages
 on:
-  push:
-    branches:
-      - main
+ push:
+  branches:
+   - main
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Config
-      # with:
-      #   persist-credentials: false
-      run: |
-        git config --global user.email "meishenlieshou@gmail.com"
-        git config --global user.name "meishenlieshou"
-    - run: yarn
-    - run: yarn build
-    #- run: node patchURL.js
-    - run: yarn deploy --skip-build
-      env:
-        GIT_USER: ${{ github.actor }}:${{ github.token }}
+ build-and-deploy:
+  runs-on: ubuntu-latest
+  permissions:
+   contents: write # 允许 Git 操作（push、commit）
+   pages: write # 如果涉及 GitHub Pages 部署，需加此权限
+  steps:
+   - uses: actions/checkout@v2
+   - name: Config
+     # with:
+     #   persist-credentials: false
+     run: |
+      git config --global user.email "meishenlieshou@gmail.com"
+      git config --global user.name "meishenlieshou"
+   - run: yarn
+   - run: yarn build
+   #- run: node patchURL.js
+   - run: yarn deploy --skip-build
+     env:
+      GIT_USER: ${{ github.actor }}:${{ github.token }}

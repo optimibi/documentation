@@ -40,7 +40,7 @@ const config = {
 	onBrokenMarkdownLinks: "warn",
 	favicon: "img/favicon.ico",
 	organizationName: "optimibi", // Usually your GitHub org/user name.
-	projectName: "DocusaurusDataforDocument", // Usually your repo name.
+	projectName: "documentation", // Usually your repo name.
 	i18n: {
 		defaultLocale: "zh-CN",
 		locales: ["zh-CN", "en"],
@@ -73,9 +73,7 @@ const config = {
 					sidebarPath: require.resolve("./sidebars.js"),
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
-					editUrl:
-						//"https://github.com/datafor123/DocusaurusDataforDocument/edit/main",
-						"https://github.com/optimibi/documentation/edit/main",
+					editUrl: "https://github.com/optimibi/documentation/edit/main",
 				},
 				pages: {
 					path: "src/pages",

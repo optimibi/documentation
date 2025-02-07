@@ -32,7 +32,7 @@ const config = {
 	title: "OPTIMIBI",
 	tagline: "OPTIMIBI Documentation",
 	url: "https://optimibi.github.io/",
-	baseUrl: "/documentation",
+	baseUrl: "/documentation/",
 	onBrokenLinks: "throw",
 	onBrokenMarkdownLinks: "warn",
 	favicon: "img/favicon.ico",

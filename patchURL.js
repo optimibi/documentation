@@ -25,7 +25,7 @@ const travel = function (_path, _check, _work) {
 	};
 	travel(_path, _check, _work, 0, trace);
 };
-const baseURL = "/";
+const baseURL = "/documentation/";
 travel(
 	"./build",
 	function (item, deep, trace, src) {
@@ -71,6 +71,3 @@ travel(
 		}
 	}
 );
-
-//在build目录下创建一个CNAME文件，内容是optimibi.github.io
-//fs.writeFileSync("./build/CNAME", "optimibi.github.io");

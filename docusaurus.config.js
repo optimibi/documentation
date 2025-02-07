@@ -19,15 +19,18 @@ const config = {
 	// Even if you don't use internalization, you can use this field to set useful
 	// metadata like html lang. For example, if your site is Chinese, you may want
 	// to replace "en" with "zh-Hans".
-	i18n: {
-		defaultLocale: "en",
-		locales: ["en"],
-		localeConfigs: {
-			en: {
-				label: "English",
-			},
-		},
-	},
+	// i18n: {
+	// 	defaultLocale: "zh",
+	// 	locales: ["en", "zh"],
+	// 	localeConfigs: {
+	// 		en: {
+	// 			label: "English"
+	// 		},
+	// 		zh: {
+	// 			label: "简体中文"
+	// 		}
+	// 	}
+	// },
 
 	title: "OPTIMIBI",
 	tagline: "OPTIMIBI Documentation",
@@ -38,6 +41,13 @@ const config = {
 	favicon: "img/favicon.ico",
 	organizationName: "optimibi", // Usually your GitHub org/user name.
 	projectName: "documentation", // Usually your repo name.
+	i18n: {
+		defaultLocale: "en",
+		locales: ["en"],
+		// localeConfigs: {
+		// 	"zh-CN": { label: "简体中文" },
+		// },
+	},
 
 	themes: [
 		// ... Your other themes.
@@ -46,24 +56,12 @@ const config = {
 			{
 				hashed: true,
 				docsRouteBasePath: "/",
-				language: "en",
+				language: ["en"],
 				highlightSearchTermsOnTargetPage: true,
 				explicitSearchResultPath: true,
 			},
 		],
 	],
-
-	// plugins: [
-	// 	[
-	// 		require.resolve("@cmfcmf/docusaurus-search-local"),
-	// 		{
-	// 			indexDocs: true,
-	// 			indexBlog: true,
-	// 			indexPages: true,
-	// 			language: ["en"], // 例如 "zh"（中文）
-	// 		},
-	// 	],
-	// ],
 
 	presets: [
 		[
@@ -72,14 +70,15 @@ const config = {
 			({
 				docs: {
 					routeBasePath: "/",
-					path: "docs",
 					sidebarPath: require.resolve("./sidebars.js"),
-					editUrl: "https://github.com/optimibi/documentation/edit/main",
+					// Please change this to your repo.
+					// Remove this to remove the "edit this page" links.
+					editUrl:
+						"https://github.com/datafor123/DocusaurusDataforDocument/edit/main",
 				},
 				pages: {
 					path: "src/pages",
 					routeBasePath: "/docs",
-					// ... configuration object here
 				},
 				theme: {
 					customCss: require.resolve("./src/css/custom.css"),
@@ -87,6 +86,15 @@ const config = {
 			}),
 		],
 	],
+
+	// plugins: [
+	// 	[
+	// 		require.resolve("@cmfcmf/docusaurus-search-local"),
+	// 		{
+	// 			indexBlog: false
+	// 		}
+	// 	]
+	// ],
 
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -109,16 +117,20 @@ const config = {
 						sidebarId: "apiSidebar",
 						label: "API",
 					},
+					// {
+					// 	type: "localeDropdown",
+					// 	position: "right",
+					// },
 				],
 			},
 			footer: {
 				style: "dark",
 				links: [
 					{
-						title: "Datafor Co., Ltd.",
+						title: "Optimibi Co., Ltd.",
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} Datafor Co., Ltd.`,
+				copyright: `Copyright © ${new Date().getFullYear()} Optimibi Co., Ltd.`,
 			},
 			prism: {
 				theme: lightCodeTheme,

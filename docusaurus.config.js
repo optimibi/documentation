@@ -32,9 +32,9 @@ const config = {
 	// 	}
 	// },
 
-	title: "Datafor",
-	tagline: "DATAFOR",
-	url: "https://optimibi.github.io/", //https://datafor123.github.io/  https://github.com/optimibi/documentation.git
+	title: "OPTIMIBI",
+	tagline: "OPTIMIBI Documentation",
+	url: "https://optimibi.github.io/",
 	baseUrl: "/docs/",
 	onBrokenLinks: "throw",
 	onBrokenMarkdownLinks: "warn",

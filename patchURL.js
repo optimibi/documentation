@@ -33,42 +33,11 @@ travel(
 		return ext === ".html" || ext === ".js";
 	},
 	function (item, deep, trace, src, stats) {
-		const content = fs.readFileSync(src);
-		//const reg = new RegExp('src="../../static/img/', "ig");
-		const reg0 = new RegExp("../static/img/", "ig");
-		const reg = new RegExp("../../static/img/", "ig");
-		const reg3 = new RegExp("../../../static/img/", "ig");
-		const reg4 = new RegExp("../../../../static/img/", "ig");
-		const reg5 = new RegExp("../../../../../static/img/", "ig");
-		const reg6 = new RegExp("../../../../../../static/img/", "ig");
-		const listArray = [reg0, reg, reg3, reg4, reg5, reg6];
-		// if (String(content).match(new RegExp("\/static\/img\/en", "ig"))) {
-		listArray.reverse().forEach(function (reg) {
-			if (String(content).match(reg)) {
-				fs.writeFileSync(src, String(content).replace(reg, baseURL + "img/"));
-			}
-		});
-		// if (String(content).match(reg5)) {
-		//   fs.writeFileSync(src, String(content).replace(reg5, baseURL + "img/"));
-		// }
-		// if (String(content).match(reg4)) {
-		//   fs.writeFileSync(src, String(content).replace(reg4, baseURL + "img/"));
-		// }
-		// if (String(content).match(reg3)) {
-		//   fs.writeFileSync(src, String(content).replace(reg3, baseURL + "img/"));
-		// }
-		// if (String(content).match(reg)) {
-		//   fs.writeFileSync(src, String(content).replace(reg, baseURL + "img/"));
-		// }
-		// if (String(content).match(reg0)) {
-		//   fs.writeFileSync(src, String(content).replace(reg0, baseURL + "img/"));
-		// }
-		// } else {
-		// 	listArray.forEach(function (reg) {
-		// 		if (String(content).match(reg)) {
-		// 			fs.writeFileSync(src, String(content).replace(reg, baseURL + "img/"));
-		// 		}
-		// 	});
-		// }
+		let content = fs.readFileSync(src, "utf8");
+		const reg = new RegExp("(?:\\.\\./)+static/img/", "g");
+
+		content = content.replace(reg, baseURL + "img/");
+
+		fs.writeFileSync(src, content, "utf8");
 	}
 );

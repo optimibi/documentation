@@ -41,3 +41,6 @@ travel(
 		fs.writeFileSync(src, content, "utf8");
 	}
 );
+
+//生成一个CNAME文件，内容是help.optimibi.com
+fs.writeFileSync("./build/CNAME", "help.optimibi.com", "utf8");

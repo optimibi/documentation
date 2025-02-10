@@ -36,7 +36,7 @@ const config = {
 	title: "OPTIMIBI",
 	tagline: "OPTIMIBI Documentation",
 	url: "https://optimibi.github.io/",
-	baseUrl: "/documentation/",
+	baseUrl: "/",
 	onBrokenLinks: "throw",
 	onBrokenMarkdownLinks: "warn",
 	favicon: "img/favicon.ico",

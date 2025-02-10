@@ -25,7 +25,7 @@ const travel = function (_path, _check, _work) {
 	};
 	travel(_path, _check, _work, 0, trace);
 };
-const baseURL = "/documentation/";
+const baseURL = "/";
 travel(
 	"./build",
 	function (item, deep, trace, src) {

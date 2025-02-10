@@ -92,7 +92,7 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: "Documentation",
+				title: "",
 				logo: {
 					src: "img/DataFor-ImageFont.svg",
 				},

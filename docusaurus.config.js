@@ -74,8 +74,7 @@ const config = {
 					sidebarPath: require.resolve("./sidebars.js"),
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
-					editUrl:
-						"https://github.com/datafor123/DocusaurusDataforDocument/edit/main",
+					editUrl: "https://github.com/optimibi/documentation/edit/main",
 				},
 				pages: {
 					path: "src/pages",

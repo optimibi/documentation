@@ -13,6 +13,12 @@ title: Welcome
 
 # n
 
+import Card from '@mui/material/Card'; 
+import CardContent from '@mui/material/CardContent'; 
+import Typography from '@mui/material/Typography'; 
+
+<Card> <CardContent> <Typography variant="h5">标题</Typography> <Typography variant="body2">这是 Material UI 卡片。</Typography> </CardContent> </Card>
+
 Datafor is a self-service agile Business Intelligence (BI) tool that offers intuitive data visualization and exploratory analysis capabilities, enabling users to quickly explore, analyze, and make data-driven decisions.
 
 **Over 56 Countries and Regions Download and Use Datafor**
